@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<!DOCTYPE hibernate-configuration PUBLIC 
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> 
+ 
+<hibernate-configuration> 
+ 
+    <session-factory> 
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> 
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+	    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/northwind</property>
+	    <property name="hibernate.connection.username">twit</property>
+	    <property name="hibernate.connection.password">twit</property>
+	    <property name="hibernate.connection.pool_size">1</property>	
+	    <property name="hibernate.cache.use_query_cache">true</property>
+	    <property name="hibernate.cache.use_second_level_cache">true</property>    
+	    <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+	    <property name="show_sql">false</property>
+	    <property name="hibernate.hbm2ddl.auto">update</property>
+	    <mapping class="edu.agh.iisg.db.tuning.model.Category"/>
+	    <mapping class="edu.agh.iisg.db.tuning.model.Customer"/>
+	    <mapping class="edu.agh.iisg.db.tuning.model.Employee"/>
+	    <mapping class="edu.agh.iisg.db.tuning.model.Order"/>
+	    <mapping class="edu.agh.iisg.db.tuning.model.OrderDetails"/>
+	    <mapping class="edu.agh.iisg.db.tuning.model.Product"/>
+	    <mapping class="edu.agh.iisg.db.tuning.model.Shipper"/>
+	    <mapping class="edu.agh.iisg.db.tuning.model.Supplier"/>
+	    
+    </session-factory> 
+ 
+</hibernate-configuration>
